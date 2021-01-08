@@ -6,15 +6,15 @@ of the standard Linux `w1-gpio` 1-wire bus master driver. Contrary to
 the standard driver, `w1-gpio-cl` is not a platform device driver, therefore
 doesn't need any specific device-tree overlay nor preconfigured kernel (except
 usual 1-wire support via the `wire` module). Moreover, there is possible
-coexistence between `w1-gpio` and `w1-gpio-cl`, provided no GPIOs conflict
-exists.
+coexistence between `w1-gpio` and `w1-gpio-cl`, provided no GPIO conflicts
+exist.
 
 Module configuration
 --------------------
 
 `w1-gpio-cl` is fully configured via its command line parameters while loading
 the driver. The configuration allows to launch many 1-wire bus masters
-controlling different GPIO pins. For parasite powering support, there is
+controlling different GPIO pins. For parasite powering support, it is
 possible to choose a type of the strong pull-up to be used.
 
 General configuration syntax is:
